@@ -1,4 +1,4 @@
-# 📊 DistroLine
+# DistroLine
 
 A highly responsive, adaptive, production-grade **6-Entity Line Distribution Engine** built from scratch using **Godot 4**. Designed for K-pop archivists, data nerds, and line-distribution creators who want a fast, lightweight desktop tool instead of a rigid, clunky spreadsheet.
 
@@ -6,7 +6,7 @@ Licensed under the permissive **MIT License** — feel free to download, modify,
 
 ---
 
-## ✨ Key Features
+## Key Features
 
 * **Adaptive Grid Layout:** Dynamically scale your session anywhere from 1 to 6 member slots on the fly. Left the input fields blank? The engine automatically engages a fallback database initialized with a classic 6-member IVE roster (`WONYOUNG`, `LIZ`, `REI`, `YUJIN`, `GAEUL`, `LEESEO`).
 * **Unison Chorus Macro:** Skip the 400 APM finger-breaking struggle during massive chorus sections or group harmonies. Tapping the unison hotkey (`KEY_0`) activates **Unison Mode**, dynamically distributing tracking runtime across all active slots simultaneously in perfect synchronization.
@@ -15,7 +15,7 @@ Licensed under the permissive **MIT License** — feel free to download, modify,
 
 ---
 
-## 🛠️ Tech Stack & Constraints
+## Tech Stack & Constraints
 
 * **Engine:** Godot 4 (GDScript)
 * **Current Boundary Limits:** Hardcapped up to 6 members (Optimized for 2-6 member groups). 
@@ -24,7 +24,7 @@ Licensed under the permissive **MIT License** — feel free to download, modify,
 
 ---
 
-## 👻 The Dev Chronicles: The Ghosting Nightmare
+## The Dev Chronicles: The Ghosting Nightmare
 
 Every systems architecture sprint has its demons. During development, a catastrophic UI bug caused the engine to layer every single newly instantiated member row directly over each other at coordinate `(0, 0)`. It looked less like an asset manager and more like a glitched, deep-fried 3D text overlay from a psychological horror game. 
 
@@ -32,7 +32,7 @@ Every systems architecture sprint has its demons. During development, a catastro
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 1. Clone this repository to your local system.
 2. Import the project root directory into the **Godot 4 engine launcher**.
@@ -41,7 +41,7 @@ Every systems architecture sprint has its demons. During development, a catastro
 
 ---
 
-## 📝 License
+## License
 
 Distributed under the **MIT License**. See `LICENSE` for more information.
 
