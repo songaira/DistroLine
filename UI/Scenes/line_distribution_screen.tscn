@@ -1,0 +1,435 @@
+[gd_scene format=3 uid="uid://cfy7h3kk6k5gx"]
+
+[ext_resource type="Script" uid="uid://fd73bdifqxri" path="res://Scripts/linedistribution_logic.gd" id="1_6aq1w"]
+[ext_resource type="FontFile" uid="uid://ct3e1n86ts0u0" path="res://UI/Fonts/UIFont/Static/Bold/Inter_28pt-Bold.ttf" id="2_6aq1w"]
+[ext_resource type="StyleBox" uid="uid://bk4787jhimog8" path="res://UI/Styleboxes/ButtonStyleBox.tres" id="3_6aq1w"]
+[ext_resource type="Script" uid="uid://dog21orogn8xv" path="res://Scripts/progressbar.gd" id="5_l6vm2"]
+[ext_resource type="FontFile" uid="uid://wajymnaqp8q7" path="res://UI/Fonts/UIFont/Static/Light/Inter_28pt-Light.ttf" id="5_p3vdi"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0mqgc"]
+bg_color = Color(1, 1, 1, 1)
+expand_margin_left = 6.0
+expand_margin_top = 6.0
+expand_margin_right = 6.0
+expand_margin_bottom = 6.0
+
+[sub_resource type="Animation" id="Animation_6aq1w"]
+resource_name = "FADEIN"
+length = 1.3333334
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("VBoxContainer:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.33333334, 1.0333333),
+"transitions": PackedFloat32Array(0.45062524, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("VBoxContainer:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.03333333, 0.76666665),
+"transitions": PackedFloat32Array(0.6372803, 1),
+"update": 0,
+"values": [Vector2(0.52, 0.52), Vector2(1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("TitleBar:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.033333335, 0.8333333),
+"transitions": PackedFloat32Array(0.45062524, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("ExitButton:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.06666667, 0.8333333),
+"transitions": PackedFloat32Array(0.45062524, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("SaveButton:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.033333335, 0.8),
+"transitions": PackedFloat32Array(0.45062524, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("UP:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.033333335, 0.8),
+"transitions": PackedFloat32Array(0.45062524, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("DOWN:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0.03333336, 0.8),
+"transitions": PackedFloat32Array(0.45062524, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_qvjwv"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("VBoxContainer:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("VBoxContainer:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_votdj"]
+_data = {
+&"FADEIN": SubResource("Animation_6aq1w"),
+&"RESET": SubResource("Animation_qvjwv")
+}
+
+[node name="Control" type="Control" unique_id=766721336 node_paths=PackedStringArray("progress_bars")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6aq1w")
+progress_bars = [NodePath("CanvasLayer/Panel/VBoxContainer/ProgressBar1"), NodePath("CanvasLayer/Panel/VBoxContainer/ProgressBar2"), NodePath("CanvasLayer/Panel/VBoxContainer/ProgressBar3"), NodePath("CanvasLayer/Panel/VBoxContainer/ProgressBar4"), NodePath("CanvasLayer/Panel/VBoxContainer/ProgressBar5"), NodePath("CanvasLayer/Panel/VBoxContainer/ProgressBar6")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1484777813]
+
+[node name="Panel" type="Panel" parent="CanvasLayer" unique_id=2018859596]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/Panel" unique_id=1563813853]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="TitleBar" type="Label" parent="CanvasLayer/Panel" unique_id=1311272514]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -16.0
+offset_top = 64.0
+offset_right = 24.0
+offset_bottom = 87.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_6aq1w")
+theme_override_font_sizes/font_size = 28
+text = "TITLE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ExitButton" type="Button" parent="CanvasLayer/Panel" unique_id=514345850]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 72.0
+offset_top = 68.0
+offset_right = 115.0
+offset_bottom = 99.0
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = ExtResource("3_6aq1w")
+theme_override_styles/pressed = ExtResource("3_6aq1w")
+theme_override_styles/hover = ExtResource("3_6aq1w")
+theme_override_styles/disabled = ExtResource("3_6aq1w")
+theme_override_styles/focus = ExtResource("3_6aq1w")
+text = "EXIT"
+
+[node name="SaveButton" type="Button" parent="CanvasLayer/Panel" unique_id=1969909659]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 72.0
+offset_top = 544.0
+offset_right = 224.0
+offset_bottom = 573.0
+theme_override_colors/font_color = Color(5.1608254e-06, 5.1608504e-06, 5.1608317e-06, 1)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_0mqgc")
+theme_override_styles/pressed = ExtResource("3_6aq1w")
+theme_override_styles/hover = ExtResource("3_6aq1w")
+theme_override_styles/disabled = ExtResource("3_6aq1w")
+theme_override_styles/focus = ExtResource("3_6aq1w")
+text = "SAVE LnDis"
+
+[node name="UP" type="Button" parent="CanvasLayer/Panel" unique_id=923616042]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 968.0
+offset_top = 544.0
+offset_right = 1008.0
+offset_bottom = 573.0
+theme_override_colors/font_color = Color(5.1608254e-06, 5.1608504e-06, 5.1608317e-06, 1)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_0mqgc")
+theme_override_styles/pressed = ExtResource("3_6aq1w")
+theme_override_styles/hover = ExtResource("3_6aq1w")
+theme_override_styles/disabled = ExtResource("3_6aq1w")
+theme_override_styles/focus = ExtResource("3_6aq1w")
+text = "UP"
+
+[node name="DOWN" type="Button" parent="CanvasLayer/Panel" unique_id=479723463]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 1032.0
+offset_top = 544.0
+offset_right = 1072.0
+offset_bottom = 573.0
+theme_override_colors/font_color = Color(5.1608254e-06, 5.1608504e-06, 5.1608317e-06, 1)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_0mqgc")
+theme_override_styles/pressed = ExtResource("3_6aq1w")
+theme_override_styles/hover = ExtResource("3_6aq1w")
+theme_override_styles/disabled = ExtResource("3_6aq1w")
+theme_override_styles/focus = ExtResource("3_6aq1w")
+text = "DN"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Panel" unique_id=2024409452]
+layout_mode = 0
+offset_left = 72.0
+offset_top = 128.0
+offset_right = 1080.0
+offset_bottom = 488.0
+pivot_offset = Vector2(505, 180)
+theme_override_constants/separation = 38
+alignment = 1
+
+[node name="ProgressBar1" type="ProgressBar" parent="CanvasLayer/Panel/VBoxContainer" unique_id=309400068]
+layout_mode = 2
+size_flags_vertical = 3
+show_percentage = false
+script = ExtResource("5_l6vm2")
+
+[node name="Label" type="Label" parent="CanvasLayer/Panel/VBoxContainer/ProgressBar1" unique_id=592749217]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("5_p3vdi")
+text = "0.0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Name" type="Label" parent="CanvasLayer/Panel/VBoxContainer/ProgressBar1" unique_id=1426492698]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_fonts/font = ExtResource("5_p3vdi")
+text = "[NAME]"
+vertical_alignment = 1
+
+[node name="ProgressBar2" type="ProgressBar" parent="CanvasLayer/Panel/VBoxContainer" unique_id=2020645763]
+layout_mode = 2
+size_flags_vertical = 3
+show_percentage = false
+script = ExtResource("5_l6vm2")
+
+[node name="Label" type="Label" parent="CanvasLayer/Panel/VBoxContainer/ProgressBar2" unique_id=1903404547]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("5_p3vdi")
+text = "0.0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Name" type="Label" parent="CanvasLayer/Panel/VBoxContainer/ProgressBar2" unique_id=1512081661]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_fonts/font = ExtResource("5_p3vdi")
+text = "[NAME]"
+vertical_alignment = 1
+
+[node name="ProgressBar3" type="ProgressBar" parent="CanvasLayer/Panel/VBoxContainer" unique_id=1327214862]
+layout_mode = 2
+size_flags_vertical = 3
+show_percentage = false
+script = ExtResource("5_l6vm2")
+
+[node name="Label" type="Label" parent="CanvasLayer/Panel/VBoxContainer/ProgressBar3" unique_id=52824445]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("5_p3vdi")
+text = "0.0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Name" type="Label" parent="CanvasLayer/Panel/VBoxContainer/ProgressBar3" unique_id=173693009]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_fonts/font = ExtResource("5_p3vdi")
+text = "[NAME]"
+vertical_alignment = 1
+
+[node name="ProgressBar4" type="ProgressBar" parent="CanvasLayer/Panel/VBoxContainer" unique_id=1718513838]
+layout_mode = 2
+size_flags_vertical = 3
+show_percentage = false
+script = ExtResource("5_l6vm2")
+
+[node name="Label" type="Label" parent="CanvasLayer/Panel/VBoxContainer/ProgressBar4" unique_id=2133559081]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("5_p3vdi")
+text = "0.0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Name" type="Label" parent="CanvasLayer/Panel/VBoxContainer/ProgressBar4" unique_id=364898385]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_fonts/font = ExtResource("5_p3vdi")
+text = "[NAME]"
+vertical_alignment = 1
+
+[node name="ProgressBar5" type="ProgressBar" parent="CanvasLayer/Panel/VBoxContainer" unique_id=681246403]
+layout_mode = 2
+size_flags_vertical = 3
+show_percentage = false
+script = ExtResource("5_l6vm2")
+
+[node name="Label" type="Label" parent="CanvasLayer/Panel/VBoxContainer/ProgressBar5" unique_id=327453520]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("5_p3vdi")
+text = "0.0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Name" type="Label" parent="CanvasLayer/Panel/VBoxContainer/ProgressBar5" unique_id=1522636803]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_fonts/font = ExtResource("5_p3vdi")
+text = "[NAME]"
+vertical_alignment = 1
+
+[node name="ProgressBar6" type="ProgressBar" parent="CanvasLayer/Panel/VBoxContainer" unique_id=1181231640]
+layout_mode = 2
+size_flags_vertical = 3
+show_percentage = false
+script = ExtResource("5_l6vm2")
+
+[node name="Label" type="Label" parent="CanvasLayer/Panel/VBoxContainer/ProgressBar6" unique_id=1232446725]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("5_p3vdi")
+text = "0.0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Name" type="Label" parent="CanvasLayer/Panel/VBoxContainer/ProgressBar6" unique_id=125600531]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_fonts/font = ExtResource("5_p3vdi")
+text = "[NAME]"
+vertical_alignment = 1
+
+[node name="NOTICE" type="Label" parent="CanvasLayer" unique_id=2058503204]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -34.0
+offset_top = 568.0
+offset_right = 42.0
+offset_bottom = 603.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_6aq1w")
+theme_override_font_sizes/font_size = 28
+text = "[debug]"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer" unique_id=59876506]
+root_node = NodePath("../Panel")
+libraries/ = SubResource("AnimationLibrary_votdj")
+
+[connection signal="pressed" from="CanvasLayer/Panel/ExitButton" to="." method="_on_exit_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/Panel/SaveButton" to="." method="_on_add_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/Panel/SaveButton" to="." method="_on_save_ln_dis_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/Panel/UP" to="." method="_on_up_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/Panel/DOWN" to="." method="_on_dn_button_pressed"]

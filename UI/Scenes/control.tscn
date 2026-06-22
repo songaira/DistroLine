@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://dalpikpjt6ird"]
+
+[ext_resource type="Script" uid="uid://csvjb61i3bkqt" path="res://Scripts/line_edit.gd" id="1_32fkb"]
+[ext_resource type="FontFile" uid="uid://dvd633cryelpb" path="res://UI/Fonts/UIFont/Static/Light/Poppins-Regular.ttf" id="1_wpiit"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yvqqc"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wpiit"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[node name="LineEdit" type="LineEdit" unique_id=1068242895]
+offset_right = 368.0
+offset_bottom = 45.0
+theme_override_fonts/font = ExtResource("1_wpiit")
+theme_override_font_sizes/font_size = 23
+theme_override_styles/normal = SubResource("StyleBoxFlat_yvqqc")
+theme_override_styles/focus = SubResource("StyleBoxFlat_wpiit")
+placeholder_text = "MEMBER NAME"
+script = ExtResource("1_32fkb")

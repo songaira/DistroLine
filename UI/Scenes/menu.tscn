@@ -1,0 +1,308 @@
+[gd_scene format=3 uid="uid://dg74sqcl7t6mt"]
+
+[ext_resource type="StyleBox" uid="uid://bk4787jhimog8" path="res://UI/Styleboxes/ButtonStyleBox.tres" id="1_8qogn"]
+[ext_resource type="Script" uid="uid://cgo67rkfo5axh" path="res://Scripts/menu.gd" id="1_aaf2s"]
+[ext_resource type="Shader" uid="uid://ce205d5rlgc8u" path="res://UI/Scenes/discrete.gdshader" id="1_v2klo"]
+[ext_resource type="FontFile" uid="uid://bq3fnn7l2xwc8" path="res://UI/Fonts/Poppins-Bold.ttf" id="1_y66ys"]
+[ext_resource type="Script" uid="uid://bbsank310fad2" path="res://Scripts/color_rect_3.gd" id="2_vjveg"]
+[ext_resource type="Shader" uid="uid://cc6hjdnot1akm" path="res://new_shader.gdshader" id="3_trsnh"]
+[ext_resource type="Shader" uid="uid://c8728wv730slb" path="res://vignette.gdshader" id="4_vjveg"]
+[ext_resource type="AudioStream" uid="uid://cgj2x6p7vl33v" path="res://senormusica81-ambient-calm-v1-456855.mp3" id="8_a06wa"]
+[ext_resource type="FontFile" uid="uid://dvd633cryelpb" path="res://UI/Fonts/UIFont/Static/Light/Poppins-Regular.ttf" id="8_bp3on"]
+[ext_resource type="FontFile" uid="uid://c4e5rv37akhpw" path="res://UI/Fonts/UIFont/Static/Bold/Cinzel-Bold.ttf" id="9_2hygc"]
+[ext_resource type="FontFile" uid="uid://c8nskdhkhvj7p" path="res://UI/Fonts/UIFont/Static/Bold/Montserrat-Bold.ttf" id="10_ym2hp"]
+[ext_resource type="FontFile" uid="uid://d1plx54hm26og" path="res://UI/Fonts/UIFont/Static/Light/Montserrat-Regular.ttf" id="11_4edky"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_v2klo"]
+shader = ExtResource("1_v2klo")
+shader_parameter/space_bg_color = Color(0.005, 0.005, 0.015, 1)
+shader_parameter/star_density = 0.08
+shader_parameter/twinkle_speed = 2.5
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_bp3on"]
+shader = ExtResource("3_trsnh")
+shader_parameter/time_speed = 0.36400001729
+shader_parameter/flip_y = true
+shader_parameter/sea_color_dark = Color(0.42815375, 0.0866769, 0.2825802, 1)
+shader_parameter/sea_color_light = Color(0.96862745, 0.5568628, 0.5686275, 1)
+shader_parameter/refraction_color = Color(0.5118815, 0.1269646, 0.09106443, 1)
+shader_parameter/light_shaft_color = Color(0.94509804, 0.9137255, 0.6666667, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2hygc"]
+shader = ExtResource("4_vjveg")
+shader_parameter/outerRadius = 1.0
+shader_parameter/MainAlpha = 0.30000001425
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2hygc"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ym2hp"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4edky"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="Animation" id="Animation_trsnh"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/FadeBlock:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/Panel/Label:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_vjveg"]
+resource_name = "fadein"
+length = 2.7333333
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/FadeBlock:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.13333334, 1.9),
+"transitions": PackedFloat32Array(0.7578583, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0, 0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/Panel/Label:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.6666667, 2.7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_a06wa"]
+resource_name = "fadeout"
+length = 2.7666667
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/FadeBlock:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.06666667, 2.6666667),
+"transitions": PackedFloat32Array(1.7411014, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/Panel/Label:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.33333334, 2.6666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0.21803278)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_a06wa"]
+_data = {
+&"RESET": SubResource("Animation_trsnh"),
+&"fadein": SubResource("Animation_vjveg"),
+&"fadeout": SubResource("Animation_a06wa")
+}
+
+[node name="Control" type="Control" unique_id=1351831906]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_aaf2s")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=521533353]
+script = ExtResource("2_vjveg")
+
+[node name="Panel" type="Panel" parent="CanvasLayer" unique_id=407343003]
+material = SubResource("ShaderMaterial_v2klo")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="ColorRect2" type="ColorRect" parent="CanvasLayer/Panel" unique_id=1917873004]
+material = SubResource("ShaderMaterial_bp3on")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/Panel" unique_id=2037117509]
+material = SubResource("ShaderMaterial_2hygc")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="CanvasLayer/Panel" unique_id=506664047]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 296.0
+offset_right = 341.0
+offset_bottom = 364.0
+theme_override_fonts/font = ExtResource("1_y66ys")
+theme_override_font_sizes/font_size = 48
+text = "DISTRO"
+
+[node name="Label2" type="Label" parent="CanvasLayer/Panel/Label" unique_id=29008464]
+layout_mode = 0
+offset_left = 176.0
+offset_right = 453.0
+offset_bottom = 68.0
+theme_override_fonts/font = ExtResource("8_bp3on")
+theme_override_font_sizes/font_size = 48
+text = "LINE"
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/Panel/Label" unique_id=421355548]
+layout_mode = 0
+offset_left = 176.0
+offset_top = 56.0
+offset_right = 352.0
+offset_bottom = 96.0
+scale = Vector2(1, 0.15)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Panel/Label" unique_id=815009937]
+layout_mode = 0
+offset_top = 88.0
+offset_right = 192.0
+offset_bottom = 228.0
+theme_override_constants/separation = 12
+
+[node name="CreateButton" type="Button" parent="CanvasLayer/Panel/Label/VBoxContainer" unique_id=156392193]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("8_bp3on")
+theme_override_styles/normal = ExtResource("1_8qogn")
+theme_override_styles/pressed = ExtResource("1_8qogn")
+theme_override_styles/hover = ExtResource("1_8qogn")
+theme_override_styles/disabled = ExtResource("1_8qogn")
+text = "CREATE"
+alignment = 0
+
+[node name="ExitButton" type="Button" parent="CanvasLayer/Panel/Label/VBoxContainer" unique_id=1225573256]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("8_bp3on")
+theme_override_styles/normal = ExtResource("1_8qogn")
+theme_override_styles/pressed = ExtResource("1_8qogn")
+theme_override_styles/hover = ExtResource("1_8qogn")
+text = "EXIT"
+alignment = 0
+
+[node name="VersionLabel" type="Label" parent="CanvasLayer/Panel/Label" unique_id=1768955802]
+layout_mode = 0
+offset_left = 277.0
+offset_top = 67.0
+offset_right = 356.0
+offset_bottom = 90.0
+theme_override_colors/font_color = Color(1, 1, 1, 0.40784314)
+theme_override_fonts/font = ExtResource("8_bp3on")
+text = "v0.1.indev"
+
+[node name="DevName" type="Button" parent="CanvasLayer/Panel/Label" unique_id=697183627]
+layout_mode = 0
+offset_left = 3.0
+offset_top = -11.0
+offset_right = 82.0
+offset_bottom = 19.0
+theme_override_colors/font_color = Color(1, 1, 1, 0.80784315)
+theme_override_fonts/font = ExtResource("9_2hygc")
+theme_override_styles/normal = SubResource("StyleBoxFlat_2hygc")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ym2hp")
+theme_override_styles/hover = SubResource("StyleBoxFlat_4edky")
+text = "AiraDev"
+alignment = 0
+
+[node name="EngineName" type="Label" parent="CanvasLayer/Panel/Label" unique_id=591068473]
+layout_mode = 0
+offset_left = 968.0
+offset_top = 312.0
+offset_right = 1047.0
+offset_bottom = 335.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("10_ym2hp")
+text = "GODOT"
+
+[node name="EngineVersion" type="Label" parent="CanvasLayer/Panel/Label" unique_id=1668624776]
+layout_mode = 0
+offset_left = 1032.0
+offset_top = 312.0
+offset_right = 1111.0
+offset_bottom = 335.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("11_4edky")
+text = "4.7"
+
+[node name="BottomToast" type="Label" parent="CanvasLayer/Panel/Label" unique_id=1965100839]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = 255.0
+offset_right = 79.0
+offset_bottom = 278.0
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("11_4edky")
+text = "[DEBUG]"
+vertical_alignment = 1
+
+[node name="FadeBlock" type="ColorRect" parent="CanvasLayer" unique_id=1699733702]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=151141221]
+stream = ExtResource("8_a06wa")
+autoplay = true
+parameters/looping = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=985981489]
+libraries/ = SubResource("AnimationLibrary_a06wa")
+
+[connection signal="pressed" from="CanvasLayer/Panel/Label/VBoxContainer/CreateButton" to="." method="_on_create_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/Panel/Label/VBoxContainer/ExitButton" to="." method="_on_exit_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/Panel/Label/DevName" to="." method="_on_devname_button_pressed"]

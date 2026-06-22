@@ -1,0 +1,540 @@
+[gd_scene format=3 uid="uid://beymbt3xbfti"]
+
+[ext_resource type="Script" uid="uid://ceb2ynhoq3hix" path="res://Scripts/setup_screen.gd" id="1_g4et6"]
+[ext_resource type="StyleBox" uid="uid://bk4787jhimog8" path="res://UI/Styleboxes/ButtonStyleBox.tres" id="2_ugqvk"]
+[ext_resource type="FontFile" uid="uid://dvd633cryelpb" path="res://UI/Fonts/UIFont/Static/Light/Poppins-Regular.ttf" id="3_ugqvk"]
+[ext_resource type="AudioStream" uid="uid://dxo82ugofvjae" path="res://leberch-ambient-electronics-524300.mp3" id="4_lcmc0"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lcmc0"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_654hx"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7xwhc"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t3dqd"]
+bg_color = Color(0.95686275, 0.9411765, 0.9607843, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ugqvk"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0fbet"]
+bg_color = Color(1, 1, 1, 1)
+expand_margin_left = 8.0
+expand_margin_top = 8.0
+expand_margin_right = 8.0
+expand_margin_bottom = 8.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n21mi"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xl2wn"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="Animation" id="Animation_lcmc0"]
+length = 2.3333333
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/Panel/VBoxContainer:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(832, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/Panel/VBoxContainer:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CanvasLayer/Panel/ColorRect/ExitButton:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(104, 544)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CanvasLayer/Panel/ColorRect/ExitButton:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CanvasLayer/Panel/CreateButton:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(736.4, 544)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("CanvasLayer/Panel/VBoxContainer2:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("CanvasLayer/Label2:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("CanvasLayer/Label:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("CanvasLayer/Panel/TrackName:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("CanvasLayer/Panel/ColorRect/ColorRect2:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("CanvasLayer/Panel/ColorRect/ColorRect:modulate")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("CanvasLayer/Panel/ADDMEMBERBUTTON:modulate")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_t3dqd"]
+resource_name = "fadein"
+length = 1.6333333
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/Panel/VBoxContainer:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.2666667, 1.2),
+"transitions": PackedFloat32Array(0.3789291, 1),
+"update": 0,
+"values": [Vector2(1200, 0), Vector2(832, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/Panel/VBoxContainer:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.6666667, 1.5),
+"transitions": PackedFloat32Array(0.3186403, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CanvasLayer/Panel/ColorRect/ExitButton:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.1, 1.2, 1.5),
+"transitions": PackedFloat32Array(0.39229193, 0.39229193, 2.3784103),
+"update": 0,
+"values": [Vector2(104, 800), Vector2(104, 536.685), Vector2(104, 544.0016)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CanvasLayer/Panel/CreateButton:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.33333334, 1.4333334, 1.6),
+"transitions": PackedFloat32Array(0.39229193, 0.39229193, 2.3784103),
+"update": 0,
+"values": [Vector2(736.4, 800), Vector2(736.4, 536.55), Vector2(736.4, 544)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CanvasLayer/Panel/CreateButton:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.6333333, 1.4333334),
+"transitions": PackedFloat32Array(0.5358867, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("CanvasLayer/Panel/ColorRect/ExitButton:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.39999998, 1.2),
+"transitions": PackedFloat32Array(0.5358867, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("CanvasLayer/Panel/VBoxContainer2:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0.13333334, 0.73333335),
+"transitions": PackedFloat32Array(0.48296806, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("CanvasLayer/Label2:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0.13333334, 1.2666667),
+"transitions": PackedFloat32Array(0.48296806, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("CanvasLayer/Label:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0.13333334, 1),
+"transitions": PackedFloat32Array(0.48296806, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("CanvasLayer/Panel/TrackName:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0.13333334, 1.3333334),
+"transitions": PackedFloat32Array(0.48296806, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("CanvasLayer/Panel/ColorRect/ColorRect2:modulate")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0.13333334, 1.6333333),
+"transitions": PackedFloat32Array(0.48296806, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("CanvasLayer/Panel/ColorRect/ColorRect:modulate")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0.13333334, 1.6),
+"transitions": PackedFloat32Array(0.48296806, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("CanvasLayer/Panel/ADDMEMBERBUTTON:modulate")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0.13333334, 1.3),
+"transitions": PackedFloat32Array(0.34151012, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_n21mi"]
+_data = {
+&"RESET": SubResource("Animation_lcmc0"),
+&"fadein": SubResource("Animation_t3dqd")
+}
+
+[node name="Control" type="Control" unique_id=44184048 node_paths=PackedStringArray("track_name_edit", "columns_parent_container")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_g4et6")
+track_name_edit = NodePath("CanvasLayer/Panel/TrackName")
+columns_parent_container = NodePath("CanvasLayer/Panel/VBoxContainer2")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2071766894]
+
+[node name="Panel" type="Panel" parent="CanvasLayer" unique_id=126922965]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_lcmc0")
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/Panel" unique_id=1086382789]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="ExitButton" type="Button" parent="CanvasLayer/Panel/ColorRect" unique_id=1306748412]
+layout_mode = 0
+offset_left = 104.0
+offset_top = 544.0
+offset_right = 165.00009
+offset_bottom = 575.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_styles/normal = ExtResource("2_ugqvk")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_654hx")
+theme_override_styles/hover = SubResource("StyleBoxFlat_7xwhc")
+text = "EXIT"
+alignment = 0
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/Panel/ColorRect" unique_id=1409124216]
+layout_mode = 0
+offset_left = 824.0
+offset_top = 72.0
+offset_right = 1324.0
+offset_bottom = 105.33313
+rotation = 1.5707964
+scale = Vector2(1, 0.1)
+color = Color(1, 1, 1, 0.0627451)
+
+[node name="ColorRect2" type="ColorRect" parent="CanvasLayer/Panel/ColorRect" unique_id=202027414]
+layout_mode = 0
+offset_left = 168.0
+offset_top = 312.0
+offset_right = 668.0
+offset_bottom = 345.33313
+scale = Vector2(1, 0.1)
+color = Color(1, 1, 1, 0.0627451)
+
+[node name="VBoxContainer2" type="HBoxContainer" parent="CanvasLayer/Panel" unique_id=114957439]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 112.0
+offset_top = -312.0
+offset_right = 720.0
+offset_bottom = -104.0
+grow_vertical = 0
+theme_override_constants/separation = 34
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Panel" unique_id=1507963356]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -320.0
+offset_top = -324.0
+offset_right = -0.00012207031
+offset_bottom = 324.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_constants/separation = 18
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/Panel/VBoxContainer" unique_id=1184935864]
+layout_mode = 2
+size_flags_vertical = 3
+color = Color(1, 1, 1, 0)
+
+[node name="Label" type="Label" parent="CanvasLayer/Panel/VBoxContainer/ColorRect" unique_id=1771078950]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 96.0
+offset_right = 95.0
+offset_bottom = 119.0
+theme_override_fonts/font = ExtResource("3_ugqvk")
+theme_override_font_sizes/font_size = 20
+text = "CUTOUTS"
+vertical_alignment = 1
+
+[node name="COMINGSOON" type="Label" parent="CanvasLayer/Panel/VBoxContainer/ColorRect" unique_id=1915650909]
+layout_mode = 0
+offset_left = 88.0
+offset_top = 312.0
+offset_right = 200.0
+offset_bottom = 361.0
+theme_override_fonts/font = ExtResource("3_ugqvk")
+text = "COMING SOON"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TrackName" type="LineEdit" parent="CanvasLayer/Panel" unique_id=561699254]
+layout_mode = 0
+offset_left = 104.0
+offset_top = 104.0
+offset_right = 416.0
+offset_bottom = 176.0
+theme_override_fonts/font = ExtResource("3_ugqvk")
+theme_override_font_sizes/font_size = 23
+theme_override_styles/normal = SubResource("StyleBoxFlat_t3dqd")
+theme_override_styles/focus = SubResource("StyleBoxFlat_ugqvk")
+placeholder_text = "TRACK NAME"
+caret_blink = true
+caret_blink_interval = 0.54
+
+[node name="CreateButton" type="Button" parent="CanvasLayer/Panel" unique_id=965195152]
+layout_mode = 0
+offset_left = 736.4
+offset_top = 544.0
+offset_right = 794.4
+offset_bottom = 568.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_0fbet")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_n21mi")
+theme_override_styles/hover = SubResource("StyleBoxFlat_xl2wn")
+text = "CREATE"
+
+[node name="ADDMEMBERBUTTON" type="Button" parent="CanvasLayer/Panel" unique_id=1045179039]
+layout_mode = 0
+offset_left = 568.0
+offset_top = 264.0
+offset_right = 675.0
+offset_bottom = 295.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_0fbet")
+text = "ADD MEMBER"
+
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=1476922612]
+offset_left = 104.0
+offset_top = 88.0
+offset_right = 253.0
+offset_bottom = 123.0
+theme_override_fonts/font = ExtResource("3_ugqvk")
+theme_override_font_sizes/font_size = 18
+text = "TRACK NAME"
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="CanvasLayer" unique_id=1164670069]
+offset_left = 112.0
+offset_top = 264.0
+offset_right = 221.0
+offset_bottom = 299.0
+theme_override_fonts/font = ExtResource("3_ugqvk")
+theme_override_font_sizes/font_size = 24
+text = "MEMBERS"
+
+[node name="fadeblock" type="ColorRect" parent="CanvasLayer" unique_id=1749376350]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 0)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1086081233]
+stream = ExtResource("4_lcmc0")
+volume_db = -18.0
+autoplay = true
+parameters/looping = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=2128510600]
+libraries/ = SubResource("AnimationLibrary_n21mi")
+
+[connection signal="pressed" from="CanvasLayer/Panel/ColorRect/ExitButton" to="." method="_on_exit_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/Panel/CreateButton" to="." method="_on_create_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/Panel/ADDMEMBERBUTTON" to="." method="_on_add_member_button_pressed"]

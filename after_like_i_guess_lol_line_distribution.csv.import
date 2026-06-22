@@ -1,0 +1,19 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://c0blgdaaqop6k"
+
+[deps]
+
+files=["res://after_like_i_guess_lol_line_distribution. Member Name.translation", "res://after_like_i_guess_lol_line_distribution. Duration(Seconds).translation", "res://after_like_i_guess_lol_line_distribution. Percentage (%).translation"]
+
+source_file="res://after_like_i_guess_lol_line_distribution.csv"
+dest_files=["res://after_like_i_guess_lol_line_distribution. Member Name.translation", "res://after_like_i_guess_lol_line_distribution. Duration(Seconds).translation", "res://after_like_i_guess_lol_line_distribution. Percentage (%).translation"]
+
+[params]
+
+compress=1
+delimiter=0
+unescape_keys=false
+unescape_translations=true
